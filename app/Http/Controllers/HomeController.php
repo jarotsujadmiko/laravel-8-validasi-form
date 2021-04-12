@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\User;
 use Validator;
-use App\Http\Request\CreateUserRequest;
+use App\Http\Requests\CreateUserRequest;
 
 class HomeController extends Controller
 {
@@ -23,7 +23,7 @@ class HomeController extends Controller
 
         $user           = new User;
         $user->name     = $request->name;
-        $user->password = $bcrypt($request->password);
+        $user->password = bcrypt($request->password);
         $user->email    = $request->email;
         $user->save();
 
@@ -62,10 +62,10 @@ class HomeController extends Controller
     }
 
     public function store3(CreateUserRequest $request){
-        $user           => new User;
-        $user->name     => $request->name;
-        $user->password => bcrypt($request->password);
-        $user->email    => $request->email;
+        $user           = new User;
+        $user->name     = $request->name;
+        $user->password = bcrypt($request->password);
+        $user->email    = $request->email;
         $user->save();
 
         return back()->with('success','User created successfully');

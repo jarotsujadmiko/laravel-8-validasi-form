@@ -26,18 +26,18 @@ class CreateUserRequest extends FormRequest
         return [
             'name'      => 'required',
             'password'  => 'required|min:5',
-            'email'     => 'required|email|unique:users',
+            'email'     => 'required|email|unique:users'
         ];
     }
 
-    public function message(){
-        return[
+    public function messages(){
+        return [
             'name.required'         => 'nama wajib di isi............',
             'password.required'     => 'password wajib di isi ........',
             'password.min'          => 'password terlalu pendek.......',
             'email.required'        => 'email wajib di isi....',
             'email.email'           => 'email tidak valid.......',
             'email.unique'          => 'email sudah terdaftar......'
-        ]
+        ];
     }
 }
