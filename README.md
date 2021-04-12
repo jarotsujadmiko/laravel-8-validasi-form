@@ -60,3 +60,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Catatan Boss
+
+Untuk menjalankan projek ini ada hal yang perlu di perhatikan.
+1. Clone file projek dengan cara => git clone https.alamatnya
+2. Install package yang diperlukan laravel dengan cara => composer install
+3. Buat database seperti konfigurasi database di file .env
+4. Buat generate key dengan cara => php artisan key:generate
+5. Migrasi database dengan cara => php artisan migrate
+6. Lokasi Urlnya => *localhost*/user/create
